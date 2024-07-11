@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Blog do Gustavo</title>
 </head>
 <body>
-    <header>
-
+    <header class="cabecalhoMenu">
+        <h1> Blog do Gustavo </h1>
+        <nav class="menu">
+            <ul>
+                <li> <a href="index.html"> Blog </a> </li>
+                <li> <a href="about.html"> Sobre </a> </li>
+            </ul>
+            
+        </nav>
     </header>
 
     <main>
+        <div class="textoBlog">
+            <img src="img/Lobisomem-de-Sao-Sepe.jpg" alt="Lobisomem de São Sepe" id="lobisomem">
+        </div>
         <section>
             <header>
                 <h2> List de Artigos </h2>
@@ -26,12 +37,27 @@
                     </details>
                 </header>
                 <p>
-                    <a href="posts/20240710-primeiropost.html">Vá para o Artigo</a>
+                    <a href="posts/20240710-primeiropost.html">Vá para o primeiro artigo</a><br>
                 </p>
             </article>
+            <header>
+                <article>
+                    <h3>Segundo Post</h3>
+                    <time datetime="2024-07-10 10:00">07 de Julho de 2024</time>
+                    <details>
+                        <summary>Veja um resumo: </summary>
+                        <p>Segundo post do blog! Esse é melhor que o primeiro! Não vai perder hein!</p>
+                    </details>
+                </article>
+                <p>
+                    <a href="posts/20240710-segundopost.html">Vá para o segundo artigo</a>
+                </p>
+            </header>
         </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        blogdogustavo - <a href="LICENSE"> licença </a>
+    </footer>
 </body>
 </html>

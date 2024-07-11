@@ -1,0 +1,26 @@
+.cabecalhoMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.textoBlog{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+img #lobisomem{
+    width: 200px;
+    height: 250px;
+}
