@@ -1,9 +1,19 @@
+body{
+    background-color: #196774;
+}
+
 .cabecalhoMenu{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
-    
+    background-color: #F0941F;
+    border-radius: 50px;
+    border: solid bisque 2px;
+    left: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#363432;
 }
 
 .menu{
@@ -12,15 +22,70 @@
     flex-direction: row;
 }
 
-.textoBlog{
+.textoBlog {
+    display: flex;
+}
+
+.textao{
+    display: block;
+    border: solid bisque 2px;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    width: 40%;
+    color: bisque;
+    background-color: #363432;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+
+
+/* tag para a imagem inicial */
+#trump{
+    display: block;
+    width: 200px;
+    padding-right: 20px;
+    border-color: bisque;
+}
+
+.eu{
+    display: flex;
+    justify-content: center;
+}
+
+.dono{
+    display: flex;
+    width: 30%;
+}
+
+h2, h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: bisque;
+}
+
+.artigo1{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-right: 50px;
-    padding-left: 50px;
+    justify-content:space-around;
 }
-img #lobisomem{
-    width: 200px;
-    height: 250px;
+
+article {
+    display: flex; 
+    border-radius: 10px;
+    border: solid;
+    color:bisque;
+    background-color: #EF6024;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    color: #90A19D;
+    justify-content: center;
 }
