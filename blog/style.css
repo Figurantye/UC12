@@ -95,6 +95,6 @@ section{
     color:bisque;
 }
 
-strong{
+strong, a{
     color: #FFAE00;
 }
