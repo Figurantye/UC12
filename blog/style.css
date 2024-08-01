@@ -52,11 +52,18 @@ body{
 .eu{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
 }
 
 .dono{
     display: flex;
     width: 30%;
+    justify-content: center;
+    align-items: center;
+    left: 200px;
 }
 
 h2, h3 {
