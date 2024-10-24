@@ -1,0 +1,32 @@
+{
+    "pessoa1":{
+        "nome":"Pedro Geromel",
+        "idade":"39",
+        "CPF":"0431328109",
+        "telefone":"55129471"
+    },
+    "pessoa2":{
+        "nome":"Miguel Monsalve",
+        "idade":"20",
+        "CPF":"04731412609",
+        "telefone":"52190281"
+    },
+    "pessoa3":{
+        "nome":"Franco Cristaldo",
+        "idade":"28",
+        "CPF":"0480137102",
+        "telefone":"51812031"
+    },
+    "pessoa4":{
+        "nome":"Yeferson Soteldo",
+        "idade":"27",
+        "CPF":"0381972318121",
+        "telefone":"11312809"
+    },
+    "pessoa5":{
+        "nome":"Augustín Marchesín",
+        "idade":"38",
+        "CPF":"0582051942492",
+        "telefone":"51123819"
+    }
+}

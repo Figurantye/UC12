@@ -1,0 +1,9 @@
+{
+    "nome":"Gustavo",
+    "idade":"19",
+    "endereco":{
+        "Rua":"Aquela rua",
+        "Bairro":"Aquele bairro",
+        "Cidade":"Aquela cidade"
+    }
+}

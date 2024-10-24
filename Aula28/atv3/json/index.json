@@ -1,0 +1,19 @@
+{
+
+    "Cursos":{
+        "astrofisica":{
+            "alunos":["João", "Luan", "Roberto", "Luiza"]
+        }
+            
+        
+        "bioquimica":[
+
+        ],
+        "marketing digital":[
+            
+        ],
+        "gastronomia":[],
+        "economia austríaca":[]
+    }
+
+}
