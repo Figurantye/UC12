@@ -1,7 +1,7 @@
 const imgPokemon = document.querySelector('#imgPokemon')
 const nomePokemon = document.querySelector('#nomePokemon')
 const numeroPokemon = document.querySelector('#numeroPokemon')
-const inputText = document.querySelector('#inputText')
+const inputText = document.querySelector("#inputText")
 const form = document.querySelector('#form-busca')
 const buttonA = document.querySelector('#btnAnterior')
 const buttonP = document.querySelector('#btnProximo')
@@ -12,7 +12,7 @@ let IDPokemon = 1;
 const fetchPokemon = async (pokemon) => {
     const APIresponse = await fetch (`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
     APIresponse => APIresponse.json()
-    const data = await APIresponse;
+    const data = await APIresponse.json();
     return data
 }
 
@@ -26,4 +26,4 @@ const showPokemon = async (pokemon) => {
     nomePokemon.innerHTML = dataPokemon.name;
 }
 
-showPokemon('charizard')
+showPokemon(inputText.value)
