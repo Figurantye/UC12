@@ -55,8 +55,7 @@ inputText.addEventListener('input', () =>
     IDPokemon = toString(inputText.value)
 )
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+const apagar = async () => {
     try {
         const add1 = document.getElementById('adicionado1')
         add1.remove()
@@ -82,6 +81,19 @@ form.addEventListener('submit', (event) => {
     } catch (error) {
         console.log('a merda da altura não funciona');   
     }
-    
+}
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    apagar()
     showPokemon(inputText.value.toLowerCase());
+})
+
+buttonP.addEventListener('click', () => {
+    apagar()
+    showPokemon(IDPokemon += 1)
+})
+buttonA.addEventListener('click', () => {
+    apagar()
+    showPokemon(IDPokemon -= 1)
 })
