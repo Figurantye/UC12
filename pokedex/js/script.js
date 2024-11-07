@@ -9,7 +9,7 @@ const type = document.querySelector('#typePokemon')
 const weighth1 = document.querySelector('#weight')
 const heighth1 = document.querySelector('#height')
 const sound = document.querySelector('#sound')
-
+const body = document.querySelector('body')
 let IDPokemon = 1;
 
 const fetchPokemon = async (pokemon) => {
@@ -17,6 +17,8 @@ const fetchPokemon = async (pokemon) => {
     const data = await APIresponse.json();
     return data
 }
+
+
 
 const showPokemon = async (pokemon) => {
     const dataPokemon = await fetchPokemon(pokemon);
@@ -28,18 +30,22 @@ const showPokemon = async (pokemon) => {
     texto.id = 'adicionado1'
     type.appendChild(texto)
 
-    const texto2 = document.createElement('span')
-    texto2.textContent = ` e ${dataPokemon.types[1].type.name}`
-    texto2.id = 'adicionado2'
-    type.appendChild(texto2)
+    try {
+        const texto2 = document.createElement('span')
+        texto2.textContent = ` e ${dataPokemon.types[1].type.name}`
+        texto2.id = 'adicionado2'
+        type.appendChild(texto2)
+    } catch (error) {
+        console.log('só tem um tipo');
+    }
 
     let weightPoke = document.createElement('span')
-    weightPoke.textContent = dataPokemon.weight
+    weightPoke.textContent = dataPokemon.weight/10 + 'kg'
     weightPoke.id = 'adicionado3'
-    weighth1.appendChild(weightPoke)
+    weighth1.appendChild(weightPoke,)
 
     let heightPoke = document.createElement('span')
-    heightPoke.textContent = dataPokemon.height
+    heightPoke.textContent = dataPokemon.height/10 + 'm'
     heightPoke.id = 'adicionado4'
     heighth1.appendChild(heightPoke)
 
@@ -48,14 +54,10 @@ const showPokemon = async (pokemon) => {
     nomePokemon.innerHTML = dataPokemon.name;
     numeroPokemon.innerHTML = dataPokemon.id
 
-
+    tipos(texto, nomePokemon)
 }
 
-inputText.addEventListener('input', () => 
-    IDPokemon = toString(inputText.value)
-)
-
-const apagar = async () => {
+const apagar = () => {
     try {
         const add1 = document.getElementById('adicionado1')
         add1.remove()
@@ -83,6 +85,23 @@ const apagar = async () => {
     }
 }
 
+
+
+imgPokemon.addEventListener('mouseover', async () => {
+    const dataPokemon = await fetchPokemon(IDPokemon);
+    imgPokemon.src = dataPokemon.sprites.front_shiny;
+})
+
+imgPokemon.addEventListener('mouseout', async () => {
+    const dataPokemon = await fetchPokemon(IDPokemon);
+    imgPokemon.src = dataPokemon.sprites.front_default;
+})
+
+inputText.addEventListener('input', () => 
+    IDPokemon = toString(inputText.value)
+)
+
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     apagar()
@@ -97,3 +116,78 @@ buttonA.addEventListener('click', () => {
     apagar()
     showPokemon(IDPokemon -= 1)
 })
+const tipos = (tipo, nome) => {
+    switch (tipo.textContent) {
+        case 'grass':
+            nome.style.color = 'green'
+            break;
+
+        case 'fire':
+            nome.style.color = 'red'
+            break;
+
+        case 'rock':
+            nome.style.color = 'brown'
+            break;
+
+        case 'ground':
+            nome.style.color = 'brown'
+            break;
+
+        case 'fairy':
+            nome.style.color = 'pink'
+            break;
+
+        case 'water':
+            nome.style.color = 'blue'
+            break;
+
+        case 'fighting':
+            nome.style.color = 'brown'
+            break;
+
+        case 'bug':
+            nome.style.color = 'green'
+            break;
+
+        case 'normal':
+            nome.style.color = 'gray'
+            break;
+
+        case 'flying':
+            nome.style.color = 'gray'
+            break;
+
+        case 'poison':
+            nome.style.color = 'purple'
+            break;
+
+        case 'electric':
+            nome.style.color = 'yellow'
+            break;
+
+        case 'dark':
+            nome.style.color = 'darkgray'
+            break;
+
+        case 'ghost':
+            nome.style.color = 'purple'
+            break;
+
+        case 'steel':
+            nome.style.color = 'gray'
+            break;
+            
+        case 'psychic':
+            nome.style.color = 'yellow'
+            break;
+            
+        case 'ice':
+            nome.style.color = 'blue'
+            break;
+            
+
+        default:    
+            break;
+    }
+}
