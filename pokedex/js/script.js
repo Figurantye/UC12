@@ -191,3 +191,5 @@ const tipos = (tipo, nome) => {
             break;
     }
 }
+
+showPokemon(IDPokemon)

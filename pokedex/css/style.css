@@ -95,3 +95,7 @@ main{
     left: 28%;
     height: 100%;
 }
+
+#nomePokemon{
+    text-shadow: -3px 2px 2px black;
+}
